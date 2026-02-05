@@ -1,0 +1,39 @@
+name: Daily Tech News Briefing
+
+on:
+  schedule:
+    # 한국 시간(KST) 오전 8시 = UTC 전날 오후 11시 (23:00)
+    # cron 문법: 분 시 일 월 요일
+    - cron: '0 23 * * *'
+  
+  # 수동으로 버튼 눌러서 즉시 실행해볼 수 있는 기능 (테스트용)
+  workflow_dispatch:
+
+jobs:
+  send-email-job:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. 내 코드 내려받기
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. 파이썬 설치하기
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      # 3. 라이브러리 설치하기
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      # 4. 메인 스크립트 실행하기
+      - name: Run Main Script
+        env:
+          # 아까 등록한 Secret들을 환경 변수로 주입
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python main.py
