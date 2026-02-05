@@ -1,0 +1,24 @@
+**AI & Machine Learning**
+
+*   엔비디아가 인간의 고수준 가이드에 따라 AI 코딩 에이전트들이 엔드 투 엔드로 구축한 딥러닝 런타임 ‘VibeTensor’를 공개했다. MarkTechPost
+*   구글이 이미지를 단일 패스로 처리하는 대신 도구를 사용해 능동적으로 분석하는 ‘에이전틱 비전(Agentic Vision)’ 기능을 제미나이 3 플래시에 도입했다. MarkTechPost
+*   마이크로소프트는 오픈 가중치 대규모언어모델(LLM)에 숨겨진 백도어를 탐지하고 AI 시스템의 신뢰성을 높이는 경량 스캐너를 개발했다. The Hacker News
+*   구글 리서치는 AI 모델의 정확도를 유지하면서도 모델을 더 가볍고 빠르게 만드는 ‘순차적 어텐션(Sequential Attention)’ 기술을 발표했다. Google Research
+*   Apptopia 데이터에 따르면 챗GPT의 사용자 성장세가 둔화되는 반면, 구글 제미나이와 xAI의 그록은 사용자 층을 빠르게 넓히며 시장 점유율을 높이고 있다. Il Sole 24 ORE
+
+**Cybersecurity & Cyberwar**
+
+*   최근 NGINX 서버와 관리 패널을 대상으로 웹 트래픽을 탈취하여 공격자 인프라로 우회시키는 ‘React2Shell’ 취약점(CVSS 10.0) 악용 사례가 발견되었다. The Hacker News
+*   미국 사이버보안국(CISA)은 과거 제로데이 공격에 쓰였던 VMware ESXi의 고위험 샌드박스 탈취 취약점이 현재 랜섬웨어 공격에 악용되고 있다고 경고했다. BleepingComputer
+*   중국 연계 해킹 그룹 ‘아마란스 드래곤(Amaranth-Dragon)’이 WinRAR 취약점을 악용해 동남아시아 정부 및 법 집행 기관을 대상으로 스파이 활동을 벌이고 있다. Check Point Research
+*   CISA는 연방 정부 기관을 대상으로 현재 공격에 악용되고 있는 5년 전의 깃랩(GitLab) 취약점에 대해 긴급 패치를 명령했다. BleepingComputer
+*   오픈소스 워크플로우 자동화 플랫폼 n8n에서 호스트 서버의 완전한 제어권을 탈취할 수 있는 다수의 치명적 취약점과 익스플로잇 코드가 공개되었다. BleepingComputer
+*   ‘DEAD#VAX’로 명명된 새로운 멀티 스테이지 캠페인이 IPFS에 호스팅된 파일과 고도의 난독화 기술을 사용해 AsyncRAT 악성코드를 배포 중이다. The Hacker News
+*   해킹 그룹 NoName057이 2026년 밀라노-코르티나 동계 올림픽 관련 기관 및 숙박 시설을 대상으로 대규모 DDoS 공격을 감행하고 있다. Cyber Security 360
+
+**Regulation & Digital Policy**
+
+*   API 키와 토큰 같은 ‘비인간 ID(Non-human Identities)’ 유출이 클라우드 환경에서 공격자들에게 장기적인 접근 권한을 제공하는 주요 보안 위협으로 부상했다. BleepingComputer
+*   왓츠앱(WhatsApp)은 기자나 공인 등 고위험군 사용자를 보호하기 위해 개인정보 보호 수준을 대폭 강화한 ‘엄격한 계정 설정’ 기능을 도입했다. Cyber Security 360
+
+Tech briefing automatically generated on February 5, 2026.
