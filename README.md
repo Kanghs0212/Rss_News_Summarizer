@@ -2,6 +2,8 @@
 
 매일 아침 AI, 사이버 보안, 빅테크 관련 주요 뉴스를 RSS로 수집하고, Google Gemini API를 활용하여 요약한 뒤, HTML 형식의 뉴스레터로 이메일을 발송하는 자동화 프로젝트입니다.
 
+![](2026-02-05-15-50-19.png)
+
 ## 주요 기능
 
 * **RSS 데이터 수집**: The Hacker News, Google Research, NVIDIA Blog 등 약 20여 개의 주요 기술 및 보안 관련 RSS 피드에서 최신 기사를 수집합니다.
