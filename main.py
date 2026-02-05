@@ -4,7 +4,7 @@ import email_sender
 import time
 
 def main():
-    print("🚀 뉴스 요약 자동화 시스템을 시작합니다.")
+    print("뉴스 요약 자동화 시스템을 시작합니다.")
     
     # 1. RSS 수집
     print("\n[Step 1] RSS 데이터 수집")
@@ -19,9 +19,9 @@ def main():
         # 3. 이메일 발송
         print("\n[Step 3] 이메일 발송")
         email_sender.send_email()
-        print("\n✨ 모든 작업이 성공적으로 끝났습니다!")
+        print("\n모든 작업이 성공적으로 끝났습니다!")
     else:
-        print("\n❌ 요약 생성 실패로 메일을 보내지 않습니다.")
+        print("\n요약 생성 실패로 메일을 보내지 않습니다.")
 
 if __name__ == "__main__":
     main()

@@ -7,17 +7,19 @@ from datetime import datetime
 load_dotenv()
 
 def generate_summary():
-    # 1. RSS 데이터 읽기
+    # outputs 폴더에서 읽기
+    input_path = os.path.join("outputs", "rss_data.json")
+    
     try:
-        with open("rss_data.json", "r", encoding="utf-8") as f:
+        with open(input_path, "r", encoding="utf-8") as f:
             articles = json.load(f)
     except FileNotFoundError:
+        print(f"{input_path} 파일이 없습니다. 먼저 수집기를 실행하세요.")
         return None
 
     if not articles:
         return None
 
-    # 오늘 날짜 (헤더용)
     today_str = datetime.now().strftime("%d %B %Y")
 
     # 2. Gemini 프롬프트 (HTML 디자인 지침 포함)
@@ -49,7 +51,7 @@ def generate_summary():
 
     """
 
-    print("🤖 Gemini가 HTML 뉴스레터를 디자인 중입니다...")
+    print("Gemini가 HTML 뉴스레터를 디자인 중입니다...")
     
     genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
     model = genai.GenerativeModel('gemini-3-flash-preview')
@@ -57,10 +59,15 @@ def generate_summary():
     response = model.generate_content(prompt_text)
     html_content = response.text.replace("```html", "").replace("```", "") # 마크다운 제거
 
-    # HTML 파일 저장 (디버깅용)
-    with open("summary_report.html", "w", encoding="utf-8") as f:
+    # outputs 폴더에 저장 
+    output_path = os.path.join("outputs", "summary_report.html")
+    
+    os.makedirs("outputs", exist_ok=True)
+
+    with open(output_path, "w", encoding="utf-8") as f:
         f.write(html_content)
     
+    print(f"요약 완료! '{output_path}' 파일이 생성되었습니다.")
     return html_content
 
 if __name__ == "__main__":
